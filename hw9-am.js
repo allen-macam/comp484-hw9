@@ -11,11 +11,6 @@ console.log('Exercise 1:', complexArithmeticResult);
 // Exercise 2: Case Sensitivity Test
 var projectIdentifier = "COMP484";
 
-// The following incorrect reassignment is commented out because JavaScript is case-sensitive.
-// `ProjectIdentifier` is not the same identifier as `projectIdentifier`, so this would either
-// create a new global variable (in non-strict mode) or throw a ReferenceError (if used incorrectly).
-// ProjectIdentifier = "JS_Advanced"; // incorrect casing — will not reassign `projectIdentifier`;
-
 projectIdentifier = "JS_Advanced"; // correct reassignment
 console.log('Exercise 2:', projectIdentifier);
 
@@ -82,7 +77,8 @@ console.log('Exercise 10 z_pre, x:', z_pre, x); // z_pre is 11, x is 11
 // Exercise 11: Loose Equality and Coercion
 var testNumber = 0;
 var testBoolean = false;
-if (testNumber == testBoolean) {
+if (testNumber == testBoolean) 
+{
 	console.log('Exercise 11: 0 is loosely equal to false');
 }
 // Explanation: `false` coerces to 0 when compared with a number using `==`.
@@ -90,9 +86,12 @@ if (testNumber == testBoolean) {
 // Exercise 12: Strict Inequality Test
 var versionA = 10.0;
 var versionB = "10.0";
-if (versionA !== versionB) {
+if (versionA !== versionB) 
+{
 	console.log('Exercise 12: Not strictly equal');
-} else {
+} 
+else 
+{
 	console.log('Exercise 12: Strictly equal');
 }
 
@@ -100,27 +99,36 @@ if (versionA !== versionB) {
 var isLoggedIn = true;
 var isSubscriber = false;
 var isTrialExpired = false;
-if ((isLoggedIn && isSubscriber) || (isLoggedIn && !isTrialExpired)) {
+if ((isLoggedIn && isSubscriber) || (isLoggedIn && !isTrialExpired)) 
+{
 	console.log('Exercise 13: Access granted');
-} else {
+} 
+else 
+{
 	console.log('Exercise 13: Access denied');
 }
 
 // Exercise 14: Simulating XOR using Nested Conditionals
 var conditionA = true;
 var conditionB = false;
-if ((conditionA && !conditionB) || (!conditionA && conditionB)) {
+if ((conditionA && !conditionB) || (!conditionA && conditionB)) 
+{
 	console.log('Exercise 14: XOR Success');
-} else {
+} 
+else 
+{
 	console.log('Exercise 14: XOR Fail');
 }
 
 // Exercise 15: Converting IF/ELSE to Ternary Operator
 var scriptLoadType = "deferred";
 var loadStatus;
-if (scriptLoadType === "deferred") {
+if (scriptLoadType === "deferred") 
+{
 	loadStatus = "Non-blocking";
-} else {
+} 
+else 
+{
 	loadStatus = "Potentially Blocking";
 }
 var loadStatusTernary = (scriptLoadType === "deferred") ? "Non-blocking" : "Potentially Blocking";
@@ -137,7 +145,8 @@ console.log('Exercise 15:', loadStatus, loadStatusTernary);
 	could return milliseconds or an object with breakdowns per phase.
 */
 
-function calculateRenderTime() {
+function calculateRenderTime()
+{
 	// Placeholder: actual timing logic would go here (e.g., performance.now())
 }
 
@@ -167,9 +176,12 @@ console.log('Exercise 18 results:', sumResult, diffResult);
 
 // Exercise 19: Conditional based on Type Check
 var dataInput = 484;
-if (typeof dataInput === "number") {
+if (typeof dataInput === "number") 
+{
 	console.log('Exercise 19: Input is numeric.');
-} else {
+} 
+else 
+{
 	dataInput = true;
 	console.log('Exercise 19 new type:', typeof dataInput);
 }

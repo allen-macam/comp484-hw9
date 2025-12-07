@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HW9 Runner</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; padding: 18px; }
+      h1 { margin: 0 0 12px 0; font-size: 20px; }
+      #hw9-output { white-space: pre-wrap; font-family: monospace; padding:12px; border:1px solid #ddd; margin:12px 0; background:#fafafa; max-width:1000px; }
+      .hw9-line { padding:2px 0; border-bottom:1px dashed rgba(0,0,0,0.03); }
+      #hw9-output .hw9-line:last-child { border-bottom: none; }
+      .placeholder { color:#666; }
+    </style>
+  </head>
+  
+  <body>
+
+    <div id="hw9-output"></div>
+    <!-- I googled this part of the code to have the console logs show i th e.html file as well-->
+    <script>
+      (function () 
+      {
+        var oldLog = console.log;
+
+        console.log = function () 
+        {
+          oldLog.apply(console, arguments);
+
+          var out = document.getElementById('hw9-output');
+
+          if (!out) return;
+
+          var text = Array.prototype.slice.call(arguments).map(String).join(' ');
+          var d = document.createElement('div');
+
+          d.className = 'hw9-line';
+          d.textContent = text;
+          out.appendChild(d);
+        };
+      })();
+    </script>
+
+    <!-- Load the homework script -->
+    <script src="hw9-am.js"></script>
+  </body>
+</html>
